@@ -1,0 +1,34 @@
+&PARAM
+    nn = 20
+    nu = 1e-8
+/
+&STATU
+    stat  = 0
+/
+&INOUT
+    tstep = 500000000   ! must be smaller than step if we want stat, times and uu to be update in folder status
+    cstep = 100000
+    sstep = 100000
+    fstep = 10000
+    omax = 6
+/ 
+&ALGOP
+    step = 8000000000
+    beta = 0.01
+/
+&FORCE
+    dwn = 1
+    upp = 3
+    eps = 1  ! energy transfer rate
+/
+&INITU
+    e0 = .5
+/
+/
+! if we want to keep adding files to the spectra, so that they are added to the averages, we should update the parameter
+! stat in such a way that sind, tind and find start with a value = (last spectr, flux or times file) +1. This simply
+! means considering the last file "uu.XXXXX.out" in the status folder, the associated number is the time index which 
+! should be used as stat
+/
+/
+!  progress=step-ini --> step = progress + ini = progress + (stat-1)*tstep+1

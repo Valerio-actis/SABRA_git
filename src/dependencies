@@ -1,0 +1,6 @@
+# module inclusion
+
+obj/sabra.o        : obj/declarations.o
+obj/initial.o      : obj/declarations.o
+obj/forcing.o      : obj/declarations.o
+obj/computations.o : obj/declarations.o

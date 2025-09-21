@@ -1,0 +1,17 @@
+# ================================================================== |
+# Make Configuration File                                            |
+
+# fortran compiler: GNU
+COMPILER  = GNU
+# parallelization openmp: NO | YES
+PARALL    = NO
+
+# ================================================================== |
+# Compilers                                                          |
+
+# GNU
+FC_GNU     = gfortran
+FFLAGS_GNU = -O3 -funroll-loops
+GNU_OMP    = -fopenmp
+
+
