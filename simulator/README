@@ -1,0 +1,2 @@
+in bin are present 2 versions of the model, with lambda equal to the golden ratio or equal to 2.
+the value of lambda can be arbitrarily selected by compiling the src files
